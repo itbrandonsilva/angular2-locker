@@ -1,4 +1,5 @@
-import {Locker, LockerConfig} from './Locker'
+import { Locker, LockerConfig } from './Locker'
+export { Locker, LockerConfig };
 
 // angular-cli
 export default {
@@ -7,5 +8,4 @@ export default {
 
 export * from './Driver'
 export * from './IStorage'
-export * from './Locker.module'
-export * from './Locker'
+export { LockerModule } from './Locker.module'

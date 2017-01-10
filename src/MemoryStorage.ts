@@ -5,7 +5,7 @@ const _cache = new Map()
 const getKeys = () => Array.from(_cache.keys())
 
 export class MemoryStorage implements IStorage {
-  public hasOwnProperty(key) {
+  public hasProperty(key) {
     return _cache.has(key)
   }
 

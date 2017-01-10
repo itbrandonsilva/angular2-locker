@@ -2,7 +2,7 @@ import {IStorage} from './IStorage'
 import {Cookie} from './Cookie'
 
 export class CookieStorage implements IStorage {
-  public hasOwnProperty(key) {
+  public hasProperty(key) {
     return <boolean>Cookie.get(key)
   }
 

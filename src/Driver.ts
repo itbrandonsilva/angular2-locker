@@ -21,7 +21,7 @@ export class Driver {
   }
 
   public has(key: string): boolean {
-    return this.storage.hasOwnProperty(key)
+    return this.storage.hasProperty(key)
   }
 
   public remove(key: string): void {
@@ -53,8 +53,8 @@ export class Driver {
 }
 
 export const DRIVERS = {
-  LOCAL: new Driver(localStorage),
-  SESSION: new Driver(sessionStorage),
+  LOCAL: new Driver(<any>localStorage),
+  SESSION: new Driver(<any>sessionStorage),
   MEMORY: new Driver(new MemoryStorage()),
   COOKIE: new Driver(new CookieStorage())
 }
